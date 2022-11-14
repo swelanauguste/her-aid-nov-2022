@@ -1,0 +1,11 @@
+<ul class="list-group">
+    {% for myth_and_fact in myths_and_facts %}
+    <li class="list-group-item">
+        <span class="fw-bold">MYTH: {{myth_and_fact.title|title}}.</span>
+        <br>
+        <div style="background-color: #fae6dc;" class="p-2">
+            <span>FACT: {{myth_and_fact.details|title}}.</span>
+        </div>
+    </li>
+    {% endfor %}
+</ul>

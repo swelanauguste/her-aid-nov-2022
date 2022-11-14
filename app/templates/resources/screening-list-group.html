@@ -1,0 +1,19 @@
+<ul class="list-group mt-5">
+    {% for question in questions %}
+    <li class="list-group-item">
+        <div class="row">
+
+            <div class="col-lg-1 px-0 mx-0">
+                <span class="material-symbols-outlined text-warning">
+                    select_check_box
+                </span>
+
+            </div>
+            <div class="col">
+                <span>{{question.question|capfirst}}?</span>
+
+            </div>
+        </div>
+    </li>
+    {% endfor %}
+</ul>

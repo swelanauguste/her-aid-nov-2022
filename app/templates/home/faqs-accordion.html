@@ -1,0 +1,32 @@
+<div class="accordion accordion-flush"
+    id="accordionFlushExample">
+
+    {% for faq in faqs %}
+
+    <div class="accordion-item">
+        <h2 class="accordion-header"
+            id="flush-heading{{faq.id}}">
+            <button class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapse{{faq.id}}"
+                aria-expanded="false"
+                aria-controls="flush-collapse{{faq.id}}">
+                <span class="rounded-circle btn-purple badge px-2">
+                    {{ forloop.counter }}</span>
+                <span class="mx-lg-2">{{faq.question|title}}?</span>
+            </button>
+        </h2>
+        <div id="flush-collapse{{faq.id}}"
+            class="accordion-collapse collapse"
+            aria-labelledby="flush-heading{{faq.id}}"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">{{faq.details|title}}</div>
+        </div>
+    </div>
+    {% endfor %}
+
+
+
+
+</div>
