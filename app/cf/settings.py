@@ -29,7 +29,6 @@ INSTALLED_APPS = [
     "django.contrib.humanize",
     "django.contrib.sites",
     # 3rd party
-    "bootstrap5",
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
