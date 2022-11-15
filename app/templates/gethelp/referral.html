@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head_title %}
+Directory Services -
+{% endblock head_title %}
+
+
+{% block content %}
+<section>
+    <div class="py-5">
+        <h1 class="text-center display-3 fw-bold">Get Help</h1>
+        <hr>
+        <br>
+        {% include 'gethelp/referrals_card.html' %}
+    </div>
+</section>
+{% endblock content %}

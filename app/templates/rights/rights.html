@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head_title %}
+Know Your Rights -
+{% endblock head_title %}
+
+
+{% block content %}
+
+
+<section>
+    <div class="py-5">
+    <h1 class="text-center display-3 fw-bold">Know Your Rights</h1>
+    <hr>
+    <br>
+    {% include 'rights/know_your_rights_card.html' %}
+</div>
+</section>
+
+
+{% endblock content %}

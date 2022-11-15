@@ -33,6 +33,10 @@ body {
     background-color: #b4e2e4 !important;
 }
 
+.text-purple {
+    color:#963279;
+}
+
 .rounded-border {
     border-radius: 1.5rem;
 }

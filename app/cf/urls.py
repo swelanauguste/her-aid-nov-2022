@@ -1,11 +1,13 @@
-from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
-from django.urls import path, include
+from django.contrib import admin
+from django.urls import include, path
 
 urlpatterns = [
-    path('', include('home.urls', namespace='home')),
-    path('resources/', include('resources.urls', namespace='resources')),
+    path("", include("home.urls", namespace="home")),
+    path("resources/", include("resources.urls", namespace="resources")),
+    path("rights/", include("rights.urls", namespace="rights")),
+    path("get-help/", include("gethelp.urls", namespace="gethelp")),
     path("admin/", admin.site.urls),
     path("accounts/", include("allauth.urls")),
 ]

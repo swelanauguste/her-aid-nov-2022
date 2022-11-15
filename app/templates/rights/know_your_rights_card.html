@@ -1,0 +1,32 @@
+<div class="col-lg-10 mx-auto">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for right in rights %}
+        <div class="col">
+            <div class="card">
+                <br>
+                <div class="card-body">
+                    <h5 class="card-title text-center">
+                        <span
+                            class="fw-bold text-dark">{{right.title|title}}</span>
+                    </h5>
+                    <p class="card-title text-center">{{right.sub_title|title}}
+                    </p>
+                    <p class="card-text mt-3">{{right.details|title}}.</p>
+                    <!-- <p class="card-text mt-3">{{abuse.details|title|truncatechars:160}}.</p> -->
+                    <div class="text-center">
+                        <!-- Button trigger modal -->
+                        <span type="button"
+                            class="text-purple fw-bold text-uppercas"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exampleModal{{right.id}}">
+                            Read More
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% include 'rights/know_your_rights_modal.html' %}
