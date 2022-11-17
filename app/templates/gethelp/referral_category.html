@@ -1,0 +1,15 @@
+<div class="col-lg-10 mx-auto">
+    <div class="row row-cols-1 row-cols-md-6 g-4">
+        {% for category in categories %}
+        <div class="col-1 mx-auto">
+            <div class="card bg-info">
+                <div class="card-body">
+                    <a href="{% url 'gethelp:referral-category-list' category.pk %}"
+                        class="card-text mt-2 text-center fw-bold">{{category.category|title}}.</a>
+                    <!-- <p class="card-text mt-3">{{abuse.details|title|truncatechars:160}}.</p> -->
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

@@ -31,6 +31,7 @@
         href="{% static 'img/favicon/site.webmanifest' %}">
     <link rel="stylesheet"
         href="{% static 'css/main.css' %}">
+
     <!-- google icons -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -45,11 +46,17 @@
 </head>
 
 <body>
-    {% include 'header.html' %}
+    <div class="row sticky-top mb-5">
+        {% include 'header.html' %}
+    </div>
+    {% include 'hotline.html' %}
+    <div class="row">
+        {% block content %}
 
-    {% block content %}
+        {% endblock content %}
+    </div>
 
-    {% endblock content %}
+  
 
     <script
         src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

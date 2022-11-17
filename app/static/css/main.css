@@ -38,11 +38,18 @@ body {
 }
 
 .rounded-border {
-    border-radius: 1.5rem;
+    border-radius: 1.5rem!important;
 }
 
 @media (max-width: 767px) {
     .content-to-hide {
         display: none;
     }
+}
+
+#hotline-button {
+    position: fixed;
+    top: 7%;
+    right: 9%;
+    z-index: 100000000;
 }

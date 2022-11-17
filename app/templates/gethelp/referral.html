@@ -2,6 +2,8 @@
 
 {% load static %}
 
+{% load crispy_forms_tags %}
+
 {% block head_title %}
 Directory Services -
 {% endblock head_title %}
@@ -12,15 +14,26 @@ Directory Services -
     <div class="py-5">
         <h1 class="text-center display-3 fw-bold">Get Help</h1>
         <hr>
-        <br><br>
+        <br>
         <div class="col-lg-6 mx-auto">
-            <input type="text"
-                name="q"
+            <h2 class="text-center">Directory Services</h2>
+            <br>
+            <!-- <input type="text"
+                name="q" placeholder="Search..."
                 class="form-control form-control-lg rounded-pill mx-auto"
-                id="">
+                id=""> -->
+            <form action=""
+                method="get">
+                {{form|crispy}}
+                <div class="text-center my-3">
+                    <button class="btn-purple btn btn-sm" type="submit">Filter</button>
+                </div>
+            </form>
         </div>
         <br><br>
-        {% include 'gethelp/referrals_card.html' %}
+        {% include 'gethelp/referral_category.html' %}
+        <br><br>
+        {% include 'gethelp/referral_card.html' %}
     </div>
 </section>
 {% endblock content %}

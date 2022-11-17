@@ -2,7 +2,7 @@ import csv
 
 from django.core.management.base import BaseCommand
 
-from ...models import Referral
+from ...models import Referral, Category
 
 class Command(BaseCommand):
 
@@ -33,6 +33,7 @@ class Command(BaseCommand):
                 for_disabled = int(row[19])
                 for_lgbt = int(row[20])
                 for_refugees = int(row[21])
+                category = Category.objects.get(pk=int(row[22]))
                 Referral.objects.get_or_create(
                     district=district,
                     address=address,
@@ -56,6 +57,7 @@ class Command(BaseCommand):
                     for_disabled=for_disabled,
                     for_lgbt=for_lgbt,
                     for_refugees=for_refugees,
+                    category=category,
                 )
                 self.stdout.write(self.style.SUCCESS(f"{name} added"))
                 

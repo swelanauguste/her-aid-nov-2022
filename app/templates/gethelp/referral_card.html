@@ -1,0 +1,45 @@
+<div class="col-lg-10 mx-auto">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for referral in referrals %}
+        <div class="col">
+            <div class="card">
+                <!-- <img src="..."
+                class="card-img-top"
+                alt="..."> -->
+                <br>
+                <div class="card-body">
+                    <h5 class="card-title text-center">
+                        {{referral.name|title}}
+                    </h5>
+                    <hr>
+                    <p class="card-text text-end">
+                        <a class="text-decoration-none text-dark"
+                            title="{{referral.tel}}"
+                            href="tel:{{referral.tel}}">
+                            {{referral.tel|title}}
+                    </p></a>
+                    <p class="card-text text-end">
+                        <a class="text-decoration-none text-dark"
+                            title="{{referral.te1l}}"
+                            href="tel:{{referral.tel1}}">
+                            {{referral.tel1|title}}
+                    </p></a>
+                    <p class="card-text text-end">
+                        <a class="text-decoration-none text-dark"
+                            title="{{referral.tel2}}"
+                            href="tel:{{referral.tel2}}">
+                            {{referral.tel2|title}}
+                    </p></a>
+                    <p>{{referral.funded_by}}</p>
+                    <p>{{referral.open_hours}}</p>
+                    <!-- <p class="card-text mt-3">{{abuse.details|title|truncatechars:160}}.</p> -->
+                </div>
+                <div class="card-footer">
+                    <p class="text-muted small text-end">Updated
+                        {{referral.updated}}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
