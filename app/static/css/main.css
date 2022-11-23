@@ -3,7 +3,7 @@
 html,
 body {
     font-family: 'Montserrat', sans-serif !important;
-    background-color: #f6e7f2;
+    background-color: #f6e7f2!important;
 }
 
 /* carousel */
@@ -23,6 +23,10 @@ body {
     position: fixed;
     bottom: 2%;
     left: 2rem;
+}
+
+.bg-pink {
+    background-color:#f6e7f2!important ;
 }
 
 .btn-purple {

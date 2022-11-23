@@ -2,7 +2,8 @@
     <div class="row row-cols-1 row-cols-md-3 g-4">
         {% for right in rights %}
         <div class="col">
-            <div class="card">
+            <div class="card bg-pink border-3 border border-dark" data-bs-toggle="modal"
+            data-bs-target="#exampleModal{{right.id}}">
                 <br>
                 <div class="card-body">
                     <h5 class="card-title text-center">
@@ -15,9 +16,8 @@
                     <div class="text-center">
                         <!-- Button trigger modal -->
                         <span type="button"
-                            class="text-purple fw-bold text-uppercas"
-                            data-bs-toggle="modal"
-                            data-bs-target="#exampleModal{{right.id}}">
+                            class="text-purple fw-bold text-uppercase"
+                           >
                             Read More
                         </span>
                     </div>

@@ -1,12 +1,12 @@
 <div class="my-3">
-    <div class="accordion"
+    <div class="accordion bg-pink"
         id="accordionExample">
         {% for myth_and_fact in myths_and_facts %}
         <div class="accordion-item">
             <h2 class="accordion-header"
                 id="heading{{myth_and_fact.id}}">
                 <button
-                    class="accordion-button collapsed border-0 border-bottom"
+                    class="accordion-button collapsed border-0 border-bottom bg-pink"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapse{{myth_and_fact.id}}"
@@ -16,7 +16,7 @@
                 </button>
             </h2>
             <div id="collapse{{myth_and_fact.id}}"
-                class="accordion-collapse collapse"
+                class="accordion-collapse collapse bg-pink"
                 aria-labelledby="heading{{myth_and_fact.id}}"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
