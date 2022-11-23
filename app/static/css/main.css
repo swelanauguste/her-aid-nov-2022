@@ -3,7 +3,7 @@
 html,
 body {
     font-family: 'Montserrat', sans-serif !important;
-    background-color: #f6e7f2!important;
+    background-color: #f6e7f2 !important;
 }
 
 /* carousel */
@@ -26,7 +26,7 @@ body {
 }
 
 .bg-pink {
-    background-color:#f6e7f2!important ;
+    background-color: #f6e7f2 !important;
 }
 
 .btn-purple {
@@ -38,22 +38,54 @@ body {
 }
 
 .text-purple {
-    color:#963279;
+    color: #963279;
 }
 
 .rounded-border {
-    border-radius: 1.5rem!important;
+    border-radius: 1.5rem !important;
 }
 
 @media (max-width: 767px) {
     .content-to-hide {
         display: none;
     }
+    
+    #hotline-button {
+        position: fixed;
+        top:2%;
+        right: 2%;
+        z-index: 100000000;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-to-hide {
+        display: none;
+    }
+
+    #hotline-button {
+        position: fixed;
+        top:2%;
+        right: 2%;
+        z-index: 100000000;
+    }
+}
+@media (max-width: 992px) {
+    .content-to-hide {
+        display: none;
+    }
+
+    #hotline-button {
+        position: fixed;
+        top: 2%;
+        right: 50%;
+        z-index: 100000000;
+    }
 }
 
 #hotline-button {
     position: fixed;
-    top: 7%;
-    right: 9%;
+    top: .5%;
+    right: 50%;
     z-index: 100000000;
 }
