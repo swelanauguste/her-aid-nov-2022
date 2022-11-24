@@ -8,7 +8,7 @@ class Category(models.Model):
         verbose_name_plural = 'categories'
 
     def __str__(self):
-        return F"{self.category.title()} ({self.id})"
+        return F"{self.category.title()}"
 
 
 class Referral(models.Model):
