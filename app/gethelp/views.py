@@ -14,6 +14,10 @@ from .models import Category, Referral
 #         return qs.filter(id=self.kwargs["pk"])
 
 
+class GetHelpViewMobile(TemplateView):
+    template_name = "gethelp/mobile/get_help.html"
+
+
 class Referral(ListView):
     queryset = Referral.objects.all()
     context_object_name = "referrals"

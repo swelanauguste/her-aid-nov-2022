@@ -49,43 +49,11 @@ body {
     .content-to-hide {
         display: none;
     }
-    
-    #hotline-button {
-        position: fixed;
-        top:2%;
-        right: 2%;
-        z-index: 100000000;
-    }
-}
-
-@media (max-width: 768px) {
-    .content-to-hide {
-        display: none;
-    }
-
-    #hotline-button {
-        position: fixed;
-        top:2%;
-        right: 2%;
-        z-index: 100000000;
-    }
-}
-@media (max-width: 992px) {
-    .content-to-hide {
-        display: none;
-    }
-
-    #hotline-button {
-        position: fixed;
-        top: 2%;
-        right: 50%;
-        z-index: 100000000;
-    }
 }
 
 #hotline-button {
     position: fixed;
-    top: .5%;
-    right: 50%;
+    top:15%;
+    right: 2%;
     z-index: 100000000;
 }
