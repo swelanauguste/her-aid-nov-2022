@@ -53,7 +53,17 @@ body {
 
 #hotline-button {
     position: fixed;
-    top:15%;
+    top: 15%;
     right: 2%;
     z-index: 100000000;
 }
+
+/* #hotline-button-mobile {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    #hotline-button-mobile {
+        display: block;
+    }
+} */

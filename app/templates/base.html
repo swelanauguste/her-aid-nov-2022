@@ -48,14 +48,14 @@
 <body>
 
     {% include 'header.html' %}
-    
-    <div class="px-2">
+
+    <div class="px-2 min-vh-100">
         {% block content %}
 
         {% endblock content %}
     </div>
 
-
+    {% include 'footer.html' %}
 
     <script
         src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
