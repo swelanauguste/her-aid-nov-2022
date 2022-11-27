@@ -16,6 +16,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*,", "heraid.kingship.info"]
 
+CSRF_TRUSTED_ORIGINS = ["https://heraid.kingship.info/"]
 
 # Application definition
 
