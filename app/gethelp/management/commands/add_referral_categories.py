@@ -7,7 +7,7 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         with open(f"static/txt/referral_categories.txt") as file:
             for row in file:
-                category = row.lower().replace("\n", "")
+                category = row.replace("\n", "")
                 self.stdout.write(self.style.SUCCESS(f"{category} added"))
                 Category.objects.get_or_create(
                     category=category,

@@ -4,3 +4,4 @@ django-crispy-forms==1.14.0
 gunicorn==20.1.0
 django-filter==22.1
 crispy-bootstrap5==0.7
+markdown==3.4.1

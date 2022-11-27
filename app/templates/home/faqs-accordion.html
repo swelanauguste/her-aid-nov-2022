@@ -1,3 +1,5 @@
+{% load markdown_extras %}
+
 <div class="accordion accordion-flush bg-pink"
     id="accordionFlushExample">
     {% for faq in faqs %}
@@ -12,14 +14,14 @@
                 aria-controls="flush-collapse{{faq.id}}">
                 <span class="rounded-circle btn-purple badge px-2">
                     {{ forloop.counter }}</span>
-                <span class="mx-lg-2">{{faq.question|capfirst}}?</span>
+                <span class="mx-lg-2">{{faq.question|markdown|safe}}?</span>
             </button>
         </h2>
         <div id="flush-collapse{{faq.id}}"
             class="accordion-collapse collapse bg-pink"
             aria-labelledby="flush-heading{{faq.id}}"
             data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">{{faq.details|capfirst}}.</div>
+            <div class="accordion-body">{{faq.details|markdown|safe}}.</div>
         </div>
     </div>
     {% endfor %}

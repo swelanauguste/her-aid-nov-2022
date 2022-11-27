@@ -2,7 +2,7 @@ import csv
 
 from django.core.management.base import BaseCommand
 
-from ...models import Referral, Category
+from ...models import Referral, Category, Location
 
 class Command(BaseCommand):
 
@@ -11,19 +11,18 @@ class Command(BaseCommand):
         with open(f"static/csv/LC_GBV_Referrals.csv", "r") as file:
             reader = csv.reader(file)
             for i, row in enumerate(reader):
-                district = row[0].lower().replace("\n", "")
-                address = row[1].lower().replace("\n", "")
+                name = row[7].replace("\n", "")
                 remote_services = row[2].replace("\n", "")
-                hotline = row[3].lower().replace("\n", "")
-                tel = row[4].lower().replace("\n", "")
-                tel1 = row[5].lower().replace("\n", "")
-                tel2 = row[6].lower().replace("\n", "")
-                name = row[7].lower().replace("\n", "")
-                organization = row[8].lower().replace("\n", "")
-                funded_by = row[9].lower().replace("\n", "")
-                sector = row[10].lower().replace("\n", "")
-                service = row[11].lower().replace("\n", "")
-                open_hours = row[12].lower().replace("\n", "")
+                location = Location.objects.get(pk=int(row[1]))
+                hotline = row[3].replace("\n", "")
+                tel = row[4].replace("\n", "")
+                tel1 = row[5].replace("\n", "")
+                tel2 = row[6].replace("\n", "")
+                organization = row[8].replace("\n", "")
+                funded_by = row[9].replace("\n", "")
+                sector = row[10].replace("\n", "")
+                service = row[11].replace("\n", "")
+                open_hours = row[12].replace("\n", "")
                 for_women = int(row[13].replace("\n", ""))
                 for_girls = int(row[14])
                 for_boys = int(row[15])
@@ -35,14 +34,13 @@ class Command(BaseCommand):
                 for_refugees = int(row[21])
                 category = Category.objects.get(pk=int(row[22]))
                 Referral.objects.get_or_create(
-                    district=district,
-                    address=address,
+                    name=name,
                     remote_services=remote_services,
+                    location=location,
                     hotline=hotline,
                     tel=tel,
                     tel1=tel1,
                     tel2=tel2,
-                    name=name,
                     organization=organization,
                     funded_by=funded_by,
                     sector=sector,

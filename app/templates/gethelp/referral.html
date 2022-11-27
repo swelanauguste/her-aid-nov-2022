@@ -23,16 +23,24 @@ Directory Services -
                 id=""> -->
             <form action=""
                 method="get">
-                {{form|crispy}}
+                <div class="row">
+                        <div class="col-lg-6">
+                            {{ form.category|as_crispy_field }}
+                        </div>
+                        <div class="col-lg-6">
+                            {{ form.location__district|as_crispy_field }}
+                        </div>
+                </div>
                 <div class="text-center my-3">
-                    <button class="btn-purple btn px-5 text-white rounded-pill" type="submit">Filter</button>
+                    <button class="btn-purple btn-lg btn px-5 text-white rounded-pill"
+                        type="submit">Filter</button>
                 </div>
             </form>
         </div>
         <br><br>
         {% include 'gethelp/referral_category.html' %}
         <br><br>
-        {% include 'gethelp/referral_card.html' %}
+        {% include 'gethelp/referrals_list.html' %}
     </div>
 </section>
 {% endblock content %}

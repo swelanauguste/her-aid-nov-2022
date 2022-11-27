@@ -2,7 +2,7 @@ from django.db import models
 
 
 class TypeOfAbuse(models.Model):
-    title = models.CharField(max_length=50, unique=True)
+    title = models.CharField(max_length=100, unique=True)
     details = models.TextField()
     updated = models.DateTimeField(auto_now=True)
 
@@ -19,7 +19,7 @@ class Screening(models.Model):
 
 
 class SignAndPrevention(models.Model):
-    title = models.CharField(max_length=50, unique=True)
+    title = models.CharField(max_length=100, unique=True)
     details = models.TextField()
     updated = models.DateTimeField(auto_now=True)
     

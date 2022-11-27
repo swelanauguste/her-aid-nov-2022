@@ -7,7 +7,7 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         with open(f"static/txt/screening-questions.txt") as file:
             for row in file:
-                question = row.lower().replace("\n", "")
+                question = row.replace("\n", "")
                 self.stdout.write(self.style.SUCCESS(f"{question} added"))
                 Screening.objects.get_or_create(
                     question=question,

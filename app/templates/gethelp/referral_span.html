@@ -1,0 +1,14 @@
+<div class="col">
+    <span class="container d-flex">
+        <label for="{{referral.id}}">{{name}}</label>
+        {% if support %}
+        <span class="material-symbols-outlined mx-1 text-success">
+        add_task
+    </span>
+    {% else %}
+    <span class="material-symbols-outlined mx-1 text-danger">
+    block
+    </span>
+    {% endif %}
+    </span>
+</div>

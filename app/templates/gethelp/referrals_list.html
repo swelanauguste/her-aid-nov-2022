@@ -1,0 +1,92 @@
+<div class="col-lg-4 mx-auto">
+    <ul class="list-group">
+        {% for referral in referrals %}
+        <li class="list-group-item text-center"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal{{referral.id}}">{{referral}}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+
+<!-- Modal -->
+
+{% for referral in referrals %}
+<div class="modal fade"
+    id="exampleModal{{referral.id}}"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-pink">
+                <h1 class="modal-title fs-5"
+                    id="exampleModalLabel">{{referral.title|title}}</h1>
+                <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+                <div class="modal-body bg-pink">
+                    <div class="d-flex justify-content-between">
+                    <a class="text-decoration-none text-dark" href="tel:{{referral.tel}}">{{referral.tel}}</a>
+                    <a class="text-decoration-none text-dark" href="tel:{{referral.tel1}}">{{referral.tel1}}</a>
+                    <a class="text-decoration-none text-dark" href="tel:{{referral.tel2}}">{{referral.tel2}}</a>
+                </div>
+                <hr>
+                <div class="bg-purple p-lg-4 p-sm-3 rounded-3">
+                    <div class="row p-3">
+                        <div class="col-lg-4 bg-pink rounded-3 p-lg-3 p-sm-5 fw-bold">
+                            <p class="m-0">Hotline</p>
+                            <p class="m-0">Organization</p>
+                            <p class="m-0">Funded_by</p>
+                            <p class="m-0">Sector</p>
+                            <p class="m-0">Service</p>
+                            <p class="m-0">Open_hours</p>
+                            <p class="m-0">Remote Services</p>
+                        </div>
+                        <div class="col-lg py-3 px-lg-5 text-white">
+                            <p class="m-0">{{referral.hotline|title|truncatechars:40}}</p>
+                            <p class="m-0">{{referral.organization|title}}</p>
+                            <p class="m-0">{{referral.funded_by|title}}</p>
+                            <p class="m-0">{{referral.sector|title}}</p>
+                            <p class="m-0">{{referral.service|title|truncatechars:40}}</p>
+                            <p class="m-0">{{referral.open_hours|title}}</p>
+                            <p class="m-0">{{referral.remote_services|yesno:"Yes,No"}}</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <p>Support for</p>
+                <div class="row">
+                    {% include 'gethelp/referral_span.html' with name='Women' support=referral.for_women %}
+                    {% include 'gethelp/referral_span.html' with name='Girls' support=referral.for_girls %}
+                </div>
+                <hr>
+                <div class="row">
+                    {% include 'gethelp/referral_span.html' with name='Men' support=referral.for_men %}
+                    {% include 'gethelp/referral_span.html' with name='Boys' support=referral.for_boys %}
+                </div>
+                <hr>
+                <div class="row">
+                    {% include 'gethelp/referral_span.html' with name='Seniors' support=referral.for_seniors %}
+                    {% include 'gethelp/referral_span.html' with name='The Homeless' support=referral.for_homeless %}
+                </div>
+                <hr>
+                <div class="row">
+                    {% include 'gethelp/referral_span.html' with name='The Disabled' support=referral.for_disabled %}
+                    {% include 'gethelp/referral_span.html' with name='LGBT' support=referral.for_lgbt %}
+
+                </div>
+                <hr>
+                <div class="row">
+                    {% include 'gethelp/referral_span.html' with name='Refugees' support=referral.for_refugees %}
+                </div>
+                <br><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endfor %}

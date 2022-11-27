@@ -2,6 +2,8 @@
 
 {% load static %}
 
+{% load markdown_extras %}
+
 {% block head_title %}
 Home - 
 {% endblock head_title %}
@@ -20,13 +22,13 @@ Home -
                 </a>
                 <span style="cursor:pointer;"
                     onclick="location.href='#what-we-do';"
-                    class="m-lg-2">What we do</span>
+                    class="m-lg-2 text-muted">What we do</span>
             </div>
             <div class="d-flex">
                 <a style="height: 2.5rem; width:2rem;"
                     class="border-3 text-dark border-dark border mb-2 rounded-circle list-group-item list-group-item-action"
                     href="#faqs">
-                    <span class="mt-lg-2 mx-lg-4">FAQs</span>
+                    <span class="mt-lg-2 mx-lg-4 text-muted">FAQs</span>
                 </a>
             </div>
             <!-- <div class="d-flex">
@@ -40,7 +42,7 @@ Home -
                 <a style="height: 2.5rem; width:2rem;"
                     class="border-3 text-dark border-dark border mb-2 rounded-circle list-group-item list-group-item-action"
                     href="#myths-and-facts">
-                    <span class="mt-lg-2 mx-lg-4">Myths</span>
+                    <span class="mt-lg-2 mx-lg-4 text-muted">Myths</span>
                 </a>
             </div>
         </div>
@@ -54,6 +56,7 @@ Home -
             tabindex="0">
          
             <section id="what-we-do">
+            <!-- <section data-bs-target="what-we-do"> -->
                 <h1 class="text-center display-3 fw-bold mt-5">What We do</h1>
                 <hr>
                 <div class="row">
@@ -62,7 +65,7 @@ Home -
                             <div class="col-lg-6 px-5">
                                 <br><br><br>
                     
-                                <p class="px-5 text-end"> The application
+                                <p class="px-5 text-end">The application
                                     contains basic
                                     information, the
                                     dynamics of abuse, common myth, laws,
