@@ -1,7 +1,7 @@
 <div class="col-lg-4 mx-auto">
     <ul class="list-group">
         {% for referral in referrals %}
-        <li class="list-group-item text-center"
+        <li style="cursor:pointer;" class="list-group-item text-center mb-2"
             data-bs-toggle="modal"
             data-bs-target="#exampleModal{{referral.id}}">{{referral}}</li>
         {% endfor %}
