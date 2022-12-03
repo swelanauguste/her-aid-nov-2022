@@ -36,6 +36,7 @@ body {
 .bg-purple {
     background-color: #963279 !important;
 }
+
 .bg-purple {
     background-color: #963279 !important;
 }
@@ -92,11 +93,54 @@ body {
     border-radius: 1.5rem !important;
 }
 
-@media (max-width: 767px) {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
     .content-to-hide {
         display: none;
     }
+
+    .sm-btn-width {
+        min-width: 16rem;
+    }
 }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    .content-to-hide {
+        display: none;
+    }
+
+    .sm-btn-width {
+        min-width: 16rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .content-to-hide {
+        display: none;
+    }
+
+    .md-btn-width {
+        min-width: 20rem;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .lg-btn-width {
+        min-width: 20rem;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .xl-btn-width {
+        min-width: 20rem;
+    }
+}
+
+
 
 #hotline-button {
     position: fixed;

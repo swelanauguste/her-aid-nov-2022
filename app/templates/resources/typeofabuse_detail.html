@@ -13,34 +13,73 @@
     <div class="col-lg-6 mx-auto">
         <p class="my-5 text-center">{{object.details}}</p>
     </div>
-    <div class="bg-pink p-5">
+    <div class="bg-pink container">
         <div class="row pb-3">
-            <div class="col">
-                <div class="text-end">
-                    <div class="btn btn-lg btn-outline-purple fw-bold p-5"
-                        style="min-width: 24rem;">Laws</div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="text-sm-center text-lg-end mb-3">
+                    <div class="btn btn-lg btn-outline-purple fw-bold p-5 sm-btn-width md-btn-width lg-btn-width xl-btn-width"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Laws</div>
                 </div>
             </div>
-            <div class="col">
-                <div class="text-start">
-                    <div class="btn btn-lg btn-outline-orange fw-bold p-5"
-                        style="min-width: 24rem;">FAQS</div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="text-lg-start text-sm-center mb-3">
+                    <div
+                        class="btn btn-lg btn-outline-orange fw-bold p-5 sm-btn-width md-btn-width lg-btn-width xl-btn-width">
+                        FAQS</div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col">
-                <div class="text-end">
-                    <div class="btn btn-lg btn-outline-blue fw-bold p-5"
-                        style="min-width: 24rem;">Resource Information</div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="text-lg-end text-sm-center mb-3">
+                    <div
+                        class="btn btn-lg btn-outline-blue fw-bold p-5 sm-btn-width md-btn-width lg-btn-width xl-btn-width">
+                        Resource Information</div>
                 </div>
             </div>
-            <div class="col">
-                <div class="text-start">
-                    <div class="btn btn-lg btn-outline-dark-blue fw-bold p-5"
-                        style="min-width: 24rem;">Screening Questions</div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="text-lg-start text-sm-center mb-3">
+                    <div
+                        class="btn btn-lg btn-outline-dark-blue fw-bold p-5 sm-btn-width md-btn-width lg-btn-width xl-btn-width">
+                        Screening Questions</div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-purple">
+                <h1 class="modal-title fs-5 text-white fw-bold mx-auto"
+                    id="exampleModalLabel">Laws</h1>
+                <!-- <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"></button> -->
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nisi temporibus porro alias nam, dolorum error aliquid
+                    possimus illo in dolores minima eligendi explicabo tempore
+                    blanditiis obcaecati facilis rem laboriosam veniam omnis,
+                    eos libero ipsum.</p>
+            </div>
+            <!-- <div class="modal-footer">
+                <button type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal">Close</button>
+                <button type="button"
+                    class="btn btn-primary">Save changes</button>
+            </div> -->
         </div>
     </div>
 </div>
