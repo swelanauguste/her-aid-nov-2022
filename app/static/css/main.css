@@ -36,6 +36,49 @@ body {
 .bg-purple {
     background-color: #963279 !important;
 }
+.bg-purple {
+    background-color: #963279 !important;
+}
+
+.btn-outline-purple {
+    color: #963279 !important;
+    border: solid 1px #963279 !important;
+}
+
+.btn-outline-blue {
+    color: #3ebcc1 !important;
+    border: solid 1px #3ebcc1 !important;
+}
+
+.btn-outline-dark-blue {
+    color: #122437 !important;
+    border: solid 1px #122437 !important;
+}
+
+.btn-outline-orange {
+    color: #d46830 !important;
+    border: solid 1px #d46830 !important;
+}
+
+.btn-outline-purple:hover {
+    background-color: #963279 !important;
+    color: #f6e7f2 !important;
+}
+
+.btn-outline-orange:hover {
+    background-color: #d46830 !important;
+    color: #f6e7f2 !important;
+}
+
+.btn-outline-blue:hover {
+    background-color: #3ebcc1 !important;
+    color: #f6e7f2 !important;
+}
+
+.btn-outline-dark-blue:hover {
+    background-color: #122437 !important;
+    color: #f6e7f2 !important;
+}
 
 .btn-blue {
     background-color: #b4e2e4 !important;

@@ -1,31 +1,29 @@
-<div class="col-lg-10 mx-auto">
+<div class="col-lg-12 mx-auto">
     <div class="row row-cols-1 row-cols-md-3 g-4">
-    {% for abuse in types_of_abuse %}
-    <div class="col">
-        <div class="card">
-            <!-- <img src="..."
+        {% for abuse in types_of_abuse %}
+        <div class="col">
+            <a class="text-decoration-none"
+                href="{% url 'resources:resource-detail' abuse.pk %}">
+                <div class="card">
+                    <!-- <img src="..."
                 class="card-img-top"
                 alt="..."> -->
-            <div style="height: 100%; width:100;"
-                class="bg-secondary text-muted">
-                <br><br><br><br><br><br><br><br><br>
-            </div>
-            <br>
-            <div class="card-body">
-                <h5 class="card-title text-center">
-                    <span
-                        class="btn btn-purple px-5 rounded-pill fw-bold text-white small" style="font-size: small;">{{abuse.title|title}}</span>
-                </h5>
-                <p class="card-text mt-3">{{abuse.details|title|truncatechars:160}}.</p>
-                <!-- <p class="card-text mt-3">{{abuse.details|title|truncatechars:160}}.</p> -->
-                <hr>
-                <div class="text-center">
-                    <a  style="font-size: small;" class="btn btn-blue px-5 text-dark small fw-bold rounded-pill"
-                        href="">Download Resource</a>
+                    <div style="height: 100%; width:100%;"
+                        class="bg-secondary text-muted">
+                        <br><br><br><br><br><br><br><br><br>
+                    </div>
+                    <br>
+                    <div class="card-body">
+                        <h5 class="card-title text-center">
+                            <p
+                                class="btn btn-info btn-lg border border-dark border-3 rounded-pill text-dark">
+                                {{abuse.title|title}}</p>
+                        </h5>
+                        <!-- <p class="card-text mt-3">{{abuse.details|title|truncatechars:160}}.</p> -->
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
 </div>

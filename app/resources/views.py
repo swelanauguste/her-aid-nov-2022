@@ -1,4 +1,4 @@
-from django.views.generic import TemplateView
+from django.views.generic import DetailView, TemplateView
 
 from .models import Screening, SignAndPrevention, TypeOfAbuse
 
@@ -13,3 +13,7 @@ class Resource(TemplateView):
         "questions": questions,
     }
     template_name = "resources/resources.html"
+
+
+class ResourceDetailView(DetailView):
+    model = TypeOfAbuse
