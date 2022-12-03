@@ -1,10 +1,10 @@
 <div class="col-lg-12 mx-auto">
     <div class="row row-cols-1 row-cols-md-3 g-4">
         {% for abuse in types_of_abuse %}
-        <div class="col">
+        <div class="col-lg-4 col-md-12 col-sm-12 mx-lg-auto">
             <a class="text-decoration-none"
                 href="{% url 'resources:resource-detail' abuse.pk %}">
-                <div class="card">
+                <div class="card bg-pink">
                     <!-- <img src="..."
                 class="card-img-top"
                 alt="..."> -->
@@ -16,7 +16,7 @@
                     <div class="card-body">
                         <h5 class="card-title text-center">
                             <p
-                                class="btn btn-info btn-lg border border-dark border-3 rounded-pill text-dark">
+                                class="btn btn-info btn-lg rounded-pill text-dark">
                                 {{abuse.title|title}}</p>
                         </h5>
                         <!-- <p class="card-text mt-3">{{abuse.details|title|truncatechars:160}}.</p> -->
