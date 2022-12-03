@@ -6,13 +6,13 @@
             <h2 class="accordion-header"
                 id="heading{{myth_and_fact.id}}">
                 <button
-                    class="accordion-button collapsed border-0 border-bottom bg-pink"
+                    class="accordion-button collapsed border-0 border-bottom bg-pink fw-bold"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapse{{myth_and_fact.id}}"
                     aria-expanded="false"
                     aria-controls="collapse{{myth_and_fact.id}}">
-                    {{myth_and_fact.title|capfirst}}.
+                    <span class="text-purple">{{myth_and_fact.title|title}}.</span>
                 </button>
             </h2>
             <div id="collapse{{myth_and_fact.id}}"
