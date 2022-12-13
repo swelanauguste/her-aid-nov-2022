@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+html,
+body {
+    font-family: 'Montserrat', sans-serif !important;
+    background-color: #f6e7f2 !important;
+}
+
+/* carousel */
+
+.carousel-item {
+    height: 32rem;
+}
+
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+}
+
+/* carousel */
+
+.side-nav {
+    position: fixed;
+    bottom: 2%;
+    left: 2rem;
+}
+
+.bg-pink {
+    background-color: #f6e7f2 !important;
+}
+
+.btn-purple {
+    background-color: #963279 !important;
+}
+
+.bg-purple {
+    background-color: #963279 !important;
+}
+
+.bg-purple {
+    background-color: #963279 !important;
+}
+
+.btn-outline-purple {
+    color: #963279 !important;
+    border: solid 1px #963279 !important;
+}
+
+.btn-outline-blue {
+    color: #3ebcc1 !important;
+    border: solid 1px #3ebcc1 !important;
+}
+
+.btn-outline-dark-blue {
+    color: #122437 !important;
+    border: solid 1px #122437 !important;
+}
+
+.btn-outline-orange {
+    color: #d46830 !important;
+    border: solid 1px #d46830 !important;
+}
+
+.btn-outline-purple:hover {
+    background-color: #963279 !important;
+    color: #f6e7f2 !important;
+}
+
+.btn-outline-orange:hover {
+    background-color: #d46830 !important;
+    color: #f6e7f2 !important;
+}
+
+.btn-outline-blue:hover {
+    background-color: #3ebcc1 !important;
+    color: #f6e7f2 !important;
+}
+
+.btn-outline-dark-blue:hover {
+    background-color: #122437 !important;
+    color: #f6e7f2 !important;
+}
+
+.btn-blue {
+    background-color: #b4e2e4 !important;
+}
+
+.text-purple {
+    color: #963279;
+}
+
+.rounded-border {
+    border-radius: 1.5rem !important;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 600px) {
+    .content-to-hide {
+        display: none;
+    }
+
+    .sm-btn-width {
+        min-width: 16rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    .content-to-hide {
+        display: none;
+    }
+
+    .sm-btn-width {
+        min-width: 20rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .content-to-hide {
+        display: none;
+    }
+
+    .md-btn-width {
+        min-width: 20rem;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .content-to-hide {
+        display: block;
+    }
+    .lg-btn-width {
+        min-width: 20rem;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .content-to-hide {
+        display: block;
+    }
+    .xl-btn-width {
+        min-width: 20rem;
+    }
+}
+
+#hotline-button {
+    position: fixed;
+    top: 15%;
+    right: 2%;
+    z-index: 100000000;
+}
+
+/* #hotline-button-mobile {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    #hotline-button-mobile {
+        display: block;
+    }
+} */
