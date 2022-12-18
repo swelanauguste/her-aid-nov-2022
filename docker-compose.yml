@@ -11,4 +11,4 @@ services:
     env_file:
       - ./.env.prod
     network_mode: "host"        
-    restart: on-failure
+    restart: always
