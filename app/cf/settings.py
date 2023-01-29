@@ -18,6 +18,8 @@ ALLOWED_HOSTS = ["*", "heraid.kingship.info"]
 
 CSRF_TRUSTED_ORIGINS = ["https://heraid.kingship.info"]
 
+X_FRAME_OPTIONS = 'ALLOW-FROM= "https://kingship.info"'
+
 # Application definition
 
 INSTALLED_APPS = [
