@@ -1,9 +1,32 @@
 import django_filters
-
-from .models import Referral
+from django import forms
+from .models import Category, Location, Referral, District
 
 
 class ReferralFilter(django_filters.FilterSet):
+    category = django_filters.ModelChoiceFilter(
+        queryset=Category.objects.all(),
+        label="Category",
+        widget=forms.Select(
+            attrs={
+                "class": "rounded-pill",
+                "onchange": "this.form.submit()",
+                "empty_label": "Categories",
+            }
+        ),
+    )
+
+    District = django_filters.ModelChoiceFilter(
+        queryset=Location.objects.all(),
+        label="Location",
+        widget=forms.Select(
+            attrs={
+                "class": "rounded-pill",
+                "onchange": "this.form.submit()",
+            }
+        ),
+    )
+
     class Meta:
         model = Referral
         fields = ["category", "location__district"]
