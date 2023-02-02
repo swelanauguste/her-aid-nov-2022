@@ -16,8 +16,8 @@ class ReferralFilter(django_filters.FilterSet):
         ),
     )
 
-    District = django_filters.ModelChoiceFilter(
-        queryset=Location.objects.all(),
+    location__district = django_filters.ModelChoiceFilter(
+        queryset=District.objects.all(),
         label="Location",
         widget=forms.Select(
             attrs={
