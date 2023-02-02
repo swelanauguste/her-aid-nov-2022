@@ -10,5 +10,5 @@ services:
       - 80:8000
     env_file:
       - ./.env.prod
-    network_mode: "host"        
+    # network_mode: "host"        
     restart: always
