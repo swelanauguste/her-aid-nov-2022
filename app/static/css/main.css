@@ -148,9 +148,9 @@ body {
 
 #hotline-button {
     position: fixed;
-    top: 15%;
+    top: 5%;
     right: 2%;
-    z-index: 100000000;
+    z-index: 9999;
 }
 
 /* #hotline-button-mobile {

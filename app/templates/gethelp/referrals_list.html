@@ -1,14 +1,12 @@
 <div class="col-lg-4 mx-auto">
     <ul class="list-group">
         {% for referral in referrals %}
-        <li style="cursor:pointer;" class="list-group-item text-center mb-2"
+        <li style="cursor:pointer;" class="list-group-item text-center mb-2 rounded-pill"
             data-bs-toggle="modal"
             data-bs-target="#exampleModal{{referral.id}}">{{referral}}</li>
         {% endfor %}
     </ul>
 </div>
-
-
 
 <!-- Modal -->
 
@@ -22,7 +20,7 @@
         <div class="modal-content">
             <div class="modal-header bg-pink">
                 <h1 class="modal-title fs-5"
-                    id="exampleModalLabel">{{referral.title|title}}</h1>
+                    id="exampleModalLabel">{{referral.name|title}}</h1>
                 <button type="button"
                     class="btn-close"
                     data-bs-dismiss="modal"

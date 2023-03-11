@@ -14,11 +14,11 @@ SECRET_KEY = "django-insecure-5-=r@ti^$(0*xboser*a83kacto#ch6cq^hj$t!yp+%7m$^tm&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*", "heraid.kingship.info"]
+ALLOWED_HOSTS = ["heraid.org"]
 
-CSRF_TRUSTED_ORIGINS = ["https://heraid.kingship.info"]
+CSRF_TRUSTED_ORIGINS = ["https://heraid.org"]
 
-X_FRAME_OPTIONS = 'ALLOW-FROM= "https://kingship.info"'
+X_FRAME_OPTIONS = 'ALLOW-FROM= "https://heraid"'
 
 # Application definition
 

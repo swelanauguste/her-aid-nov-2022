@@ -4,15 +4,6 @@ from django.views.generic import ListView, TemplateView
 from .filters import ReferralFilter
 from .models import Category, Referral
 
-# class CategoryListView(ListView):
-#     model = Category
-#     template_name = "gethelp/referral.html"
-
-#     def get_queryset(self, **kwargs):
-#         qs = super().get_queryset(**kwargs)
-#         print("qs", qs)
-#         return qs.filter(id=self.kwargs["pk"])
-
 
 class GetHelpViewMobile(TemplateView):
     template_name = "gethelp/mobile/get_help.html"
