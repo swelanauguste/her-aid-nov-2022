@@ -14,7 +14,7 @@ SECRET_KEY = "django-insecure-5-=r@ti^$(0*xboser*a83kacto#ch6cq^hj$t!yp+%7m$^tm&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["heraid.org"]
+ALLOWED_HOSTS = ["heraid.org", "*"]
 
 CSRF_TRUSTED_ORIGINS = ["https://heraid.org"]
 
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "gethelp",
     "donations",
     "home",
+    "support",
 ]
 
 SITE_ID = 1
@@ -139,3 +140,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+STRIPE_PUBLISHABLE_KEY = "pk_test_whdbI5hZTqL2p9ckdMhQwErX00EaUWiF5A"
+STRIPE_SECRET_KEY = "sk_test_ci5w34gZRzaCZ7VE3iM8pgAX00i5WQ67LF"
+STRIPE_API_VERSION = "2022-11-15"

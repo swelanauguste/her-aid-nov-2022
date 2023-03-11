@@ -8,6 +8,7 @@ urlpatterns = [
     path("resources/", include("resources.urls", namespace="resources")),
     path("rights/", include("rights.urls", namespace="rights")),
     path("get-help/", include("gethelp.urls", namespace="gethelp")),
+    path("support/", include("support.urls", namespace="support")),
     path("admin/", admin.site.urls),
     path("accounts/", include("allauth.urls")),
 ]
