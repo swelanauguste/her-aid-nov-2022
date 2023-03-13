@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block head_title %}
+Support -
+{% endblock head_title %}
+
+{% load humanize %}
+
+{% block content %}
+<div class="bg-pink">
+    
+    <div class="container col-lg-6 mx-auto py-5">
+        <h1 class="text-center">How you can support</h1>
+        <hr>
+        <div class="p-2">
+            <a class="text-decoration-none text-dark"
+                href="{% url 'support:donation-create' %}"><u>Make a
+                    donation</u></a> US${{stripe_balance|floatformat:2|intcomma}}<br>
+            <a class="text-decoration-none text-dark"
+                href="{% url 'support:volunteer-create' %}"><u>Become a volunteer</u></a>
+            <br>
+            <a class="text-decoration-none text-dark"
+                href="{% url 'support:volunteer-list' %}"><u>Volunteers</u></a>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

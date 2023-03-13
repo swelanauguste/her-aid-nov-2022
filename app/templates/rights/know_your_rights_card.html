@@ -1,25 +1,26 @@
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        {% for right in rights %}
-        <div class="col">
-            <div class="card bg-pink border-3 border border-dark" data-bs-toggle="modal"
-            data-bs-target="#exampleModal{{right.id}}">
-                <br>
-                <div class="card-body">
-                    <h5 class="card-title text-center">
-                        <span
-                            class="fw-bold text-dark">{{right.title|title}}</span>
-                    </h5>
-                    <div class="text-center">
-                        <!-- Button trigger modal -->
-                        <span type="button"
-                            class="text-purple fw-bold text-uppercase"
-                           >
-                            Read More
-                        </span>
-                    </div>
-                </div>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for right in rights %}
+    <div class="col">
+        <div class="card bg-pink border border-dark">
+            <!-- <div class="card bg-pink border-3 border border-dark" data-bs-toggle="modal"
+            data-bs-target="#exampleModal{{right.id}}"> -->
+            <br>
+            <div class="card-body">
+                <h5 class="card-title text-center pb-3">
+                    <span class="fw-bold text-dark">
+                        {% if right.doc %}
+                        <a class="text-decoration-none text-dark"
+                            target="_blank"
+                            href="{{right.doc.url}}">
+                            {% endif %}
+                            {{right.title|title}}
+                        </a>
+                    </span>
+                </h5>
+        
             </div>
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
+</div>
 {% include 'rights/know_your_rights_modal.html' %}

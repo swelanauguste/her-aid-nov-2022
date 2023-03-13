@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     "resources",
     "rights",
     "gethelp",
-    "donations",
     "home",
     "support",
 ]
@@ -144,3 +143,4 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 STRIPE_PUBLISHABLE_KEY = "pk_test_whdbI5hZTqL2p9ckdMhQwErX00EaUWiF5A"
 STRIPE_SECRET_KEY = "sk_test_ci5w34gZRzaCZ7VE3iM8pgAX00i5WQ67LF"
 STRIPE_API_VERSION = "2022-11-15"
+STRIPE_WEBHOOK_SECRET = 'whsec_bc7f355c66c04f2a894f26897c809c0c8b4753dbccaa2c18388105b2b59556b2'
