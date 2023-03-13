@@ -3,7 +3,7 @@ version: '3.8'
 services:
   web:
     build: ./app
-    command: gunicorn cf.wsgi:application --bind 0.0.0.0:8005 && stripe listen --forward-to 10.10.10.101:8005/support/webhook/
+    command: bash -c "gunicorn cf.wsgi:application --bind 0.0.0.0:8005 && stripe listen --forward-to 10.10.10.101:8005/support/webhook/"
     volumes:
       - ./app/:/usr/src/app/
     ports:
