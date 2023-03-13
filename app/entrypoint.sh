@@ -29,7 +29,7 @@ python manage.py migrate
 
 # python manage.py add_rights
 
-# python manage.py collectstatic --no-input
+python manage.py collectstatic --no-input
 
 
 exec "$@"
