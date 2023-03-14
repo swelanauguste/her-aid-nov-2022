@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% block head_title %}
+Donation -
+{% endblock head_title %}
+
+
+{% block content %}
+<div class="container py-5">
+    <h1>Donation</h1>
+    <hr>
+    <p>{{object.name}} you are about to make a donation of
+        XCD${{object.amount}} </p>
+    <form action="{% url 'support:donation-process' %}"
+        method="post">
+        {% csrf_token %}
+        <button class="btn btn-outline-dark"
+            type="submit"
+            >Donate</button>
+    </form>
+</div>
+
+{% endblock content %}

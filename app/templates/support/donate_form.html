@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block head_title %}
+Donate -
+{% endblock head_title %}
+
+
+{% block content %}
+<div class="bg-pink">
+    <div class="container">
+        <h1>Donate</h1>
+        <hr>
+            <form method="post">
+                {% csrf_token %}
+                <div class="col-lg-5 p-5 mx-auto shadow rounded-4">
+                    {{form|crispy}}
+                    <div class="my-3 text-end">
+                        <button
+                            class="btn btn-outline-success px-5 rounded-pill"
+                            type="submit">Donate</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

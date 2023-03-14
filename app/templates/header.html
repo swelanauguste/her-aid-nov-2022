@@ -2,38 +2,36 @@
 <div class="container-fluid m-0">
         {% include 'hotline.html' %}
 </div>
-<div class="container-fluid bg-pink sticky-top">
+<div class="bg-pink sticky-top">
         <header
-                class="container d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-                <a href="/"
-                        class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-                        <img class="rounded-circle border border-warning border-3"
-                                height="100rem"
-                                src="{% static 'img/her-aid-logo.png' %}"
-                                alt="">
-                </a>
-                <ul
-                        class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                        <!-- <li><a href="/"
-                                        class="nav-link px-2 link-dark">Home</a>
-                        </li> -->
-                        <li><a href="{% url 'resources:resources' %}"
-                                        class="nav-link px-2 link-dark">Resource
-                                        Information</a>
-                        </li>
-                        <li><a href="{% url 'rights:rights' %}"
-                                        class="nav-link px-2 link-dark">Know
-                                        Your Rights</a>
-                        </li>
-                        <li><a href="{% url 'gethelp:get-help' %}"
-                                        class="nav-link px-2 link-dark">Get
-                                        Help</a>
-                        </li>
-                        <!-- <li><a href="#"
-                    class="nav-link px-2 link-dark">Know your Rights</a></li>
-            <li><a href="#"
-                    class="nav-link px-2 link-dark">Get Help</a></li> -->
-                </ul>
+                class=" py-3 mb-4 shadow">
+                <div class="container d-flex flex-wrap align-items-center justify-content-center justify-content-md-between">
+                        <a href="/"
+                                class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+                                <img class="rounded-circle border border-warning border-3"
+                                        height="100rem"
+                                        src="{% static 'img/her-aid-logo.png' %}"
+                                        alt="">
+                        </a>
+                        <ul
+                                class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                                <li><a href="{% url 'resources:resources' %}"
+                                                class="nav-link px-2 link-dark">Resource
+                                                Information</a>
+                                </li>
+                                <li><a href="{% url 'rights:rights' %}"
+                                                class="nav-link px-2 link-dark">Know
+                                                Your Rights</a>
+                                </li>
+                                <li><a href="{% url 'gethelp:get-help' %}"
+                                                class="nav-link px-2 link-dark">Get
+                                                Help</a>
+                                </li>
+                                <li><a href="{% url 'support:support' %}"
+                                                class="nav-link px-2 link-dark">Support
+                                        </a>
+                                </li>
+                        </ul>
+                </div>
         </header>
-
 </div>

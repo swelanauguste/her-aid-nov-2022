@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head_title %}
+Volunteers -
+{% endblock head_title %}
+
+{% block content %}
+<div class="container py-5">
+    <h1>Volunteers</h1>
+    <hr>
+    <div class="container">
+        {% for ob in object_list %}
+        <p>({{forloop.counter}}) {{ob.name}}</p>
+        {% empty %}
+        <p>No volunteers</p>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

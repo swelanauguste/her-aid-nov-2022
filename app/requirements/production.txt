@@ -5,3 +5,4 @@ gunicorn==20.1.0
 django-filter==22.1
 crispy-bootstrap5==0.7
 Markdown==3.4.1
+stripe==5.2.0
