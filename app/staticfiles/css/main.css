@@ -152,6 +152,12 @@ body {
     right: 2%;
     z-index: 9999;
 }
+.donate-10 {
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    z-index: 9999;
+}
 
 /* #hotline-button-mobile {
     display: none;
