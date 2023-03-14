@@ -13,6 +13,7 @@ class Referral(ListView):
     queryset = Referral.objects.all()
     context_object_name = "referrals"
     template_name = "gethelp/referral.html"
+    paginate_by = 10
 
     def get_queryset(self):
         queryset = super().get_queryset()

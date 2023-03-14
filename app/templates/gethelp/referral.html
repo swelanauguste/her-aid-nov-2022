@@ -8,29 +8,103 @@
 Directory Services -
 {% endblock head_title %}
 
-
 {% block content %}
-<section>
-    <div class="py-5">
-        <h1 class="text-center display-3 fw-bold">Get Help</h1>
-        <br>
-        <div class="container">
-            <h2 class="text-center">Directory Services</h2>
+<div class="py-5 text-center">
+    <h1 class="display-3 fw-bold">GET HELP</h1><br>
+    <p class="fw-bolder"><strong>Do you need help as soon as possible? Call
+            the 24-hour Hotline. <a class="text-dark"
+                href="tel:244">+244</a></strong></p>
+    <div class="container py-5">
+        <section>
+            <div class="row">
+                <div class="col mx-auto">
+                    <a class="text-decoration-none text-dark"
+                        href="#hot-line">
+                        <span
+                            class="material-symbols-outlined text-white p-3 rounded-circle bg-purple"
+                            style="font-size: 5rem;">
+                            call
+                        </span>
+                        <br><br>
+                        <p>CALL FOR HELP</p>
+                    </a>
+                </div>
+                <div class="col mx-auto">
+                    <a class="text-decoration-none text-dark"
+                        href="">
+                        <span
+                            class="material-symbols-outlined text-white p-3 rounded-circle bg-purple"
+                            style="font-size: 5rem;">
+                            forum
+                        </span>
+                        <br><br>
+                        <p>DO YOU HAVE ANY QUESTIONS</p>
+                    </a>
+                </div>
+                <div class="col mx-auto">
+                    <a class="text-decoration-none text-dark"
+                        href="#directory">
+                        <span
+                            class="material-symbols-outlined text-white p-3 rounded-circle bg-purple"
+                            style="font-size: 5rem;">
+                            find_replace
+                        </span>
+                        <br><br>
+                        <p>DIRECTORY SERVICES</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="hot-line">
+            <h1 class="display-3">HOT LINES</h1>
+            <h6 class="fw-bold">CALL FOR HELP IMMEDIATELY</h6>
             <br>
-            <form action=""
+            <div
+                class="border border-2 col-lg-6 p-3 border-dark mx-auto rounded-4 mb-2">
+                <h5 class="mb-0">DOMESTIC VIOLENCE</h5>
+                <span class="fs-5">(24/7):<a class="text-decoration-none"
+                        href="tel:7584536846">(758)453-6848</a><span
+                        class="text-primary">/</span><a
+                        class="text-decoration-none"
+                        href="tel:7587127574">(758)712-7574</a></span><br>
+                <span class="text-purple fw-bolder">For help with domestic
+                    violence, please call this hotline</span>
+            </div>
+            <div
+                class="border border-2 col-lg-6 p-3 border-dark mx-auto rounded-4 mb-2">
+                <h5 class="mb-0">RAPE/ASSAULT</h5>
+                <a class="text-decoration-none fs-5"
+                    href="tel:202">202</a><br>
+                <span class="text-purple fw-bolder">For help with rape or
+                    assault, please call this hotline</span>
+            </div>
+            <div
+                class="border border-2 col-lg-6 p-3 border-dark mx-auto rounded-4 mb-2">
+                <h5 class="mb-0">CRIME</h5>
+                <a class="text-decoration-none fs-5"
+                    href="tel:7584519812">(758)451-9812</a><br>
+                <span class="text-purple fw-bolder">For help with all
+                    crime, please call this hotline</span>
+            </div>
+            <br>
+        </section>
+        <hr><br>
+        <section id="directory">
+            <h1 class="display-3">DIRECTORY</h1><br>
+            <form action="#directory"
                 method="get">
                 <div class="row col-lg-6 mx-auto">
-                        <div class="col-lg-6 mx-auto">
-                            {{ form.category|as_crispy_field }}
-                        </div>
-                        <div class="col-lg-6 mx-auto">
-                            {{ form.location__district|as_crispy_field }}
-                        </div>
+                    <div class="col-lg-6 mx-auto">
+                        {{ form.category|as_crispy_field }}
+                    </div>
+                    <div class="col-lg-6 mx-auto">
+                        {{ form.location__district|as_crispy_field }}
                     </div>
                 </div>
             </form>
-        </div>
-        {% include 'gethelp/referrals_list.html' %}
     </div>
-</section>
+    {% include 'gethelp/referrals_list.html' %}
+    </section>
+</div>
 {% endblock content %}

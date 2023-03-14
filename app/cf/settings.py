@@ -1,5 +1,10 @@
 import os
 from pathlib import Path
+import environ
+
+# Initialise environment variables
+env = environ.Env()
+environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -140,7 +145,13 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
-STRIPE_PUBLISHABLE_KEY = "pk_test_whdbI5hZTqL2p9ckdMhQwErX00EaUWiF5A"
-STRIPE_SECRET_KEY = "sk_test_ci5w34gZRzaCZ7VE3iM8pgAX00i5WQ67LF"
+STRIPE_PUBLISHABLE_KEY = env("STRIPE_PUBLISHABLE_KEY")
+STRIPE_SECRET_KEY = env("STRIPE_SECRET_KEY")
+STRIPE_WEBHOOK_SECRET = env("STRIPE_WEBHOOK_SECRET")
 STRIPE_API_VERSION = "2022-11-15"
-STRIPE_WEBHOOK_SECRET = 'whsec_bc7f355c66c04f2a894f26897c809c0c8b4753dbccaa2c18388105b2b59556b2'
+
+# STRIPE_PUBLISHABLE_KEY = os.environ.get("STRIPE_PUBLISHABLE_KEY")
+# STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
+# STRIPE_WEBHOOK_SECRET = os.environ.get("STRIPE_WEBHOOK_SECRET")
+# STRIPE_API_VERSION = "2022-11-15"
+

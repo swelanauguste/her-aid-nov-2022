@@ -1,3 +1,4 @@
 -r production.txt
 
 black==22.10.0
+django-environ==0.10.0

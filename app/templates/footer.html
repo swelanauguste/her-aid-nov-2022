@@ -1,106 +1,64 @@
-<div class="container-fluid px-2 bg-dark mt-5">
-    <div class="container">
-        <footer class="py-5">
-            <div class="row">
-                <div class="col-6 col-md-2 mb-3">
-                    <h5 class="text-white">Section</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#"
-                                class="nav-link p-0 text-white">Home</a></li>
-                        <li class="nav-item mb-2"><a href="#"
-                                class="nav-link p-0 text-white">Features</a>
-                        </li>
-                        <li class="nav-item mb-2"><a href="#"
-                                class="nav-link p-0 text-white">Pricing</a>
-                        </li>
-                        <li class="nav-item mb-2"><a
-                                href="{% url 'home:home' %}#faqs"
-                                class="nav-link p-0 text-white">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="#"
-                                class="nav-link p-0 text-white">About</a></li>
-                    </ul>
-                </div>
-
-                <!-- <div class="col-6 col-md-2 mb-3">
-                    <h5>Section</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#"
-                                class="nav-link p-0 text-muted">Home</a></li>
-                        <li class="nav-item mb-2"><a href="#"
-                                class="nav-link p-0 text-muted">Features</a>
-                        </li>
-                        <li class="nav-item mb-2"><a href="#"
-                                class="nav-link p-0 text-muted">Pricing</a>
-                        </li>
-                        <li class="nav-item mb-2"><a href="#"
-                                class="nav-link p-0 text-muted">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="#"
-                                class="nav-link p-0 text-muted">About</a></li>
-                    </ul>
-                </div> -->
-
-                <!-- <div class="col-6 col-md-2 mb-3">
-                    <h5>Section</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#"
-                                class="nav-link p-0 text-muted">Home</a></li>
-                        <li class="nav-item mb-2"><a href="#"
-                                class="nav-link p-0 text-muted">Features</a>
-                        </li>
-                        <li class="nav-item mb-2"><a href="#"
-                                class="nav-link p-0 text-muted">Pricing</a>
-                        </li>
-                        <li class="nav-item mb-2"><a href="#"
-                                class="nav-link p-0 text-muted">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="#"
-                                class="nav-link p-0 text-muted">About</a></li>
-                    </ul>
-                </div> -->
-
-                <!-- <div class="col-md-5 offset-md-1 mb-3">
-                    <form class="text-white">
-                        <h5>Subscribe to our newsletter</h5>
-                        <p>Monthly digest of what's new and exciting from us.
-                        </p>
-                        <div
-                            class="d-flex flex-column flex-sm-row w-100 gap-2">
-                            <label for="newsletter1"
-                                class="visually-hidden">Email address</label>
-                            <input id="newsletter1"
-                                type="text"
-                                class="form-control"
-                                placeholder="Email address">
-                            <button class="btn btn-primary"
-                                type="button">Subscribe</button>
-                        </div>
-                    </form>
-                </div> -->
+{% load static %}
+<div class="bg-purple text-white">
+    <div class="px-5">
+        <div class="row">
+            <div class="col mx-auto p-5 d-flex justify-content-center">
+                <img class="rounded-4 border border-warning border-3"
+                    height="150rem"
+                    src="{% static 'img/her-aid-logo.png' %}"
+                    alt="">
             </div>
-
-            <div
-                class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-                <p>&copy; 2022 Company, Inc. All rights reserved.</p>
+            <div class="col mx-auto p-5">
+                <h5><u>ABOUT US</u></h5>
+                <p>Her Aid's mission is to provide
+                    pathways
+                    and prevent violence against women
+                    and girls of crime and abuse, their
+                    families and communities.</p>
+            </div>
+            <div class="col mx-auto p-5">
+                <h5 class="ms-3"><u>Get in Touch</u></h5>
+                <a class="text-decoration-none text-white ms-3"
+                    href="tel:+17584892227">+1(758)489-2227</a>
+                <br>
+                <a class="text-decoration-none text-white ms-3"
+                    href="tel:+17584893909">+1(758)489-3909</a><br><br>
                 <ul class="list-unstyled d-flex">
                     <li class="ms-3"><a class="link-dark"
-                            href="#"><svg class="bi"
-                                width="24"
-                                height="24">
-                                <use xlink:href="#twitter" />
-                            </svg></a></li>
+                            href="#"><i
+                                class="bi bi-twitter text-info fs-4"></i></a>
+                    </li>
                     <li class="ms-3"><a class="link-dark"
-                            href="#"><svg class="bi"
-                                width="24"
-                                height="24">
-                                <use xlink:href="#instagram" />
-                            </svg></a></li>
+                            href="#"><i
+                                class="bi bi-youtube text-danger fs-4"></i></a>
+                    </li>
                     <li class="ms-3"><a class="link-dark"
-                            href="#"><svg class="bi"
-                                width="24"
-                                height="24">
-                                <use xlink:href="#facebook" />
-                            </svg></a></li>
+                            href="#"><i
+                                class="bi bi-instagram text-warning fs-4"></i></a>
+                    </li>
+                    <li class="ms-3"><a class="link-dark"
+                            href="#"><i
+                                class="bi bi-facebook text-primary fs-4"></i></a>
+                    </li>
                 </ul>
             </div>
-        </footer>
+            <div class="col mx-auto p-5 text-start">
+                <form class="text-white">
+                    <h5>Subscribe</h5>
+                    <label for="newsletter1"
+                        class="visually-hidden">Email address</label>
+                    <input disabled
+                        id="newsletter1"
+                        type="text"
+                        class="form-control rounded-pill"
+                        placeholder="Email address">
+                    <div class="my-3 text-end">
+                        <button class="btn btn-pink"
+                            type="button">Subscribe</button>
+                    </div>
+                </form>
+                <br><br><br>
+            </div>
+        </div>
     </div>
 </div>

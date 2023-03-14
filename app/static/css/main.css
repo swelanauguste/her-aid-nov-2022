@@ -29,11 +29,11 @@ body {
     background-color: #f6e7f2 !important;
 }
 
-.btn-purple {
-    background-color: #963279 !important;
+.btn-pink {
+    background-color: #f6e7f2 !important;
 }
 
-.bg-purple {
+.btn-purple {
     background-color: #963279 !important;
 }
 
@@ -131,6 +131,7 @@ body {
     .content-to-hide {
         display: block;
     }
+
     .lg-btn-width {
         min-width: 20rem;
     }
@@ -141,6 +142,7 @@ body {
     .content-to-hide {
         display: block;
     }
+
     .xl-btn-width {
         min-width: 20rem;
     }
@@ -152,6 +154,7 @@ body {
     right: 2%;
     z-index: 9999;
 }
+
 .donate-10 {
     position: fixed;
     bottom: 5%;
@@ -159,12 +162,34 @@ body {
     z-index: 9999;
 }
 
-/* #hotline-button-mobile {
-    display: none;
+#exit-site {
+    position: fixed;
+    bottom: 50%;
+    left: -4%;
+    z-index: 9999;
+    transform: rotate(90deg);
+    margin: 0;
 }
 
-@media (max-width: 767px) {
-    #hotline-button-mobile {
-        display: block;
-    }
+/* #hotline-button-mobile {
+    display: none;
 } */
+
+@media (max-width: 767px) {
+
+    #exit-site {
+        position: fixed;
+        bottom: 50%;
+        left: -19%;
+        z-index: 9999;
+        transform: rotate(90deg);
+        margin: 0;
+    }
+
+    .donate-10 {
+        position: fixed;
+        bottom: 5%;
+        right: 10%;
+        z-index: 9999;
+    }
+}
