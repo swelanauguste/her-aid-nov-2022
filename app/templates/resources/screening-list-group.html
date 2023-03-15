@@ -1,17 +1,14 @@
-<ul class="list-group mt-5 bg-light px-5">
+<ul class="list-group mt-5 bg-light px-lg-5">
     {% for question in questions %}
     <li class="list-group-item bg-light">
         <div class="row">
-
             <div class="col-lg-1 px-0 mx-0">
                 <span class="material-symbols-outlined text-warning">
                     select_check_box
                 </span>
-
             </div>
             <div class="col bg-light">
                 <span>{{question.question|capfirst}}?</span>
-
             </div>
         </div>
     </li>

@@ -3,6 +3,7 @@ from django.views.generic import ListView, TemplateView
 
 from .filters import ReferralFilter
 from .models import Category, Referral
+from home.models import FAQ
 
 
 class GetHelpViewMobile(TemplateView):
@@ -23,4 +24,5 @@ class Referral(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["form"] = self.filterset.form
+        context["questions"] = FAQ.objects.all()
         return context

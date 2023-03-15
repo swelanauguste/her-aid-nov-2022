@@ -1,9 +1,21 @@
 from django import forms
 from django.forms import NumberInput, Textarea, TextInput
 
-from .models import Donation, Volunteer
+from .models import Donation, Subscribe, Volunteer
 
 class1 = "border-0 border-bottom border-dark bg-pink rounded-0"
+
+
+class SubscribeCreateForm(forms.ModelForm):
+    class Meta:
+        model = Subscribe
+        fields = ("email",)
+
+
+class UnSubscribeForm(forms.ModelForm):
+    class Meta:
+        model = Subscribe
+        fields = ("email",)
 
 
 class VolunteerCreateForm(forms.ModelForm):

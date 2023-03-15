@@ -5,13 +5,28 @@ import stripe
 from django.conf import settings
 from django.shortcuts import get_object_or_404, redirect, render, reverse
 from django.views import View
-from django.views.generic import CreateView, DetailView, ListView, TemplateView
+from django.views.generic import (
+    CreateView,
+    DetailView,
+    ListView,
+    TemplateView,
+    UpdateView,
+)
 
-from .forms import DonationCreateForm, VolunteerCreateForm
-from .models import Donation, Volunteer
+from .forms import DonationCreateForm, VolunteerCreateForm, SubscribeCreateForm, UnSubscribeForm
+from .models import Donation, Subscribe, Volunteer
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 stripe.api_version = settings.STRIPE_API_VERSION
+
+
+class SubscribeCreateView(CreateView):
+    model = Subscribe
+    fields = ("email",)
+
+class SubscribeUpdateView(UpdateView):
+    model = Subscribe
+    fields = ("email",)
 
 
 class VolunteerCreateView(CreateView):
@@ -83,7 +98,7 @@ def donation_process_view(request):
                 reverse("support:donation-cancelled")
             ),
         )
-        donation.check_out_id = checkout_session['id']
+        donation.check_out_id = checkout_session["id"]
         donation.save()
         return redirect(checkout_session.url, code=303)
     return render(request, "support/process.html", locals())

@@ -8,15 +8,8 @@ Resource Information
 
 
 {% block content %}
-
-<div data-bs-spy="scroll"
-    data-bs-target="#list-example"
-    data-bs-smooth-scroll="true"
-    class="scrollspy-example"
-    tabindex="0">
-    <br><br>
     <section id="types-of-abuse">
-        <div class="container p-5">
+        <div class="container py-5">
             <h1 class="text-center display-3 fw-bold">Types of Abuse</h1>
             <hr>
             <br>
@@ -34,12 +27,12 @@ Resource Information
     </section>
     <section id="screening">
         <div class="bg-light">
-            <div class="container p-5">
+            <div class="container py-5">
                 <h1 class="text-center display-3 fw-bold">Screening
                     Questions
                 </h1>
                 <hr>
-                <div class="container-fluid d-flex justify-content-center">
+                <div class="d-flex justify-content-center">
                     <div class="col-lg-6">
                         {% include 'resources/screening-list-group.html' %}
                     </div>

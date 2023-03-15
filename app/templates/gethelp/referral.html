@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load markdown_extras %}
 {% load static %}
 
 {% load crispy_forms_tags %}
@@ -31,7 +31,7 @@ Get help -
                 </div>
                 <div class="col mx-auto">
                     <a class="text-decoration-none text-dark"
-                        href="">
+                        href="#questions">
                         <span
                             class="material-symbols-outlined text-white p-3 rounded-circle bg-purple"
                             style="font-size: 5rem;">
@@ -90,6 +90,24 @@ Get help -
             <br>
         </section>
         <hr><br>
+        <section id="questions">
+            <h4 class="">NOT SURE WHAT TO DO? DO YOU HAVE ANY QUESTIONS?</h4>
+            <h1 class="display-3">ASK AMY</h1>
+            <div class="col mx-auto">
+                <!-- Button trigger modal -->
+                <a href=""
+                    data-bs-toggle="modal"
+                    data-bs-target="#askAmy">
+                    <span
+                        class="material-symbols-outlined text-white p-3 rounded-circle bg-purple"
+                        style="font-size: 5rem;">
+                        help_center
+                    </span>
+                </a>
+            </div>
+
+        </section>
+        <hr><br>
         <section id="directory">
             <h1 class="display-3">DIRECTORY</h1><br>
             <form action="#directory"
@@ -106,5 +124,48 @@ Get help -
     </div>
     {% include 'gethelp/referrals_list.html' %}
     </section>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade"
+    id="askAmy"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <!-- Scrollable modal -->
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5"
+                    id="exampleModalLabel">ASK AMY</h1>
+                <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                {% for question in questions %}
+                {% if forloop.last %}
+                <div class="ms-5 bg-purple rounded-4 p-3 text-white mb-2">
+                    {{question.question}}?
+                </div>
+                <div class="me-5 bg-pink rounded-4 p-3 text-dark">
+                    {{question.details}}.
+                </div>
+                <br>
+                {% else %}
+                <div class="ms-5 bg-purple rounded-4 p-3 text-white mb-2">
+                    {{question.question}}?
+                </div>
+                <div class="me-5 bg-pink rounded-4 p-3 text-dark">
+                    {{question.details|markdown|safe}}
+                </div>
+                <br>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock content %}

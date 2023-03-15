@@ -1,7 +1,8 @@
+from django.conf import settings
 from django.core.validators import MinValueValidator
 from django.db import models
 from django.urls import reverse
-from django.conf import settings
+
 
 class Volunteer(models.Model):
     name = models.CharField(max_length=255)
@@ -36,3 +37,10 @@ class Donation(models.Model):
     def __str__(self):
         return f"{self.name} made a donation of {self.amount}"
 
+
+class Subscribe(models.Model):
+    email = models.EmailField()
+    is_subscribed = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.email

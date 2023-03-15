@@ -2,7 +2,7 @@ from django.db import models
 
 
 class WhatWeDo(models.Model):
-    title = models.CharField(max_length=50, unique=True)
+    title = models.TextField(unique=True)
     details = models.TextField()
     updated = models.DateTimeField(auto_now=True)
 
@@ -29,7 +29,7 @@ class WhatWeDo(models.Model):
 
 
 class FAQ(models.Model):
-    question = models.CharField(max_length=50, unique=True)
+    question = models.TextField(unique=True)
     details = models.TextField()
     updated = models.DateTimeField(auto_now=True)
 
@@ -38,7 +38,7 @@ class FAQ(models.Model):
 
 
 class MythAndFact(models.Model):
-    title = models.CharField(max_length=100, unique=True)
+    title = models.TextField(unique=True)
     details = models.TextField()
     updated = models.DateTimeField(auto_now=True)
 
