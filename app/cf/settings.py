@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+
 import environ
 
 # Initialise environment variables
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
     "gethelp",
     "home",
     "support",
+    "request",
 ]
 
 SITE_ID = 1
@@ -61,6 +63,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "request.middleware.RequestMiddleware",
 ]
 
 ROOT_URLCONF = "cf.urls"
@@ -155,3 +158,21 @@ STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
 STRIPE_WEBHOOK_SECRET = os.environ.get("STRIPE_WEBHOOK_SECRET")
 STRIPE_API_VERSION = "2022-11-15"
 
+
+REQUEST_IGNORE_PATHS = (
+    r"^/admin/",
+    r"^/static/",
+    r"^/manifest.json.js/",
+    r"^/serviceworker.js/",
+)
+
+REQUEST_PLUGINS = (
+    "request.plugins.TrafficInformation",
+    "request.plugins.LatestRequests",
+    "request.plugins.TopPaths",
+    "request.plugins.TopErrorPaths",
+    "request.plugins.TopReferrers",
+    "request.plugins.TopSearchPhrases",
+    "request.plugins.TopBrowsers",
+    "request.plugins.ActiveUsers",
+)
